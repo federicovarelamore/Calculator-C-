@@ -25,7 +25,19 @@ namespace Calculadora
 
         private void btnPunto_Click(object sender, EventArgs e)
         {
-            txtScreen.Text = txtScreen.Text + ".";
+            
+            if (!txtScreen.Text.Contains(".")) //primero verificamos que no contenga ningun punto decimal
+            {
+                if (txtScreen.Text.Length < 1) //luego que si el textbox esta vacio, que en ves de agregar un "." que agrege un "0."
+                {
+                    txtScreen.Text += "0.";
+                }
+                else
+                {
+                    txtScreen.Text += ".";
+                }
+
+            }
         }
 
         private void btnN1_Click(object sender, EventArgs e)
@@ -143,6 +155,19 @@ namespace Calculadora
                     txtScreen.Text = Division.ToString();
                     break;
             }
+
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (txtScreen.Text.Length >= 1) //verificamos si el Textbox esta vacio, diciendole que si el número de cifras es mayor o igual a uno que borre.
+            {
+                txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Count() - 1);
+            } // de lo contrario este no borraria
+        }
+
+        private void txtScreen_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
