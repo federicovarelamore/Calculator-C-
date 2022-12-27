@@ -1,6 +1,6 @@
 ﻿namespace Calculadora
 {
-    partial class Form1
+    partial class CALCULADORA
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btnResta = new System.Windows.Forms.Button();
-            this.btnDivide = new System.Windows.Forms.Button();
-            this.btnMultiplica = new System.Windows.Forms.Button();
+            this.btnDividir = new System.Windows.Forms.Button();
+            this.btnMultiplicar = new System.Windows.Forms.Button();
             this.btnSuma = new System.Windows.Forms.Button();
             this.btnN8 = new System.Windows.Forms.Button();
             this.btnN9 = new System.Windows.Forms.Button();
@@ -58,26 +58,29 @@
             this.btnResta.TabIndex = 0;
             this.btnResta.Text = "-";
             this.btnResta.UseVisualStyleBackColor = true;
+            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
             // 
-            // btnDivide
+            // btnDividir
             // 
-            this.btnDivide.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDivide.Location = new System.Drawing.Point(180, 84);
-            this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(45, 45);
-            this.btnDivide.TabIndex = 1;
-            this.btnDivide.Text = "/";
-            this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDividir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDividir.Location = new System.Drawing.Point(180, 84);
+            this.btnDividir.Name = "btnDividir";
+            this.btnDividir.Size = new System.Drawing.Size(45, 45);
+            this.btnDividir.TabIndex = 1;
+            this.btnDividir.Text = "/";
+            this.btnDividir.UseVisualStyleBackColor = true;
+            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
             // 
-            // btnMultiplica
+            // btnMultiplicar
             // 
-            this.btnMultiplica.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMultiplica.Location = new System.Drawing.Point(129, 84);
-            this.btnMultiplica.Name = "btnMultiplica";
-            this.btnMultiplica.Size = new System.Drawing.Size(45, 45);
-            this.btnMultiplica.TabIndex = 2;
-            this.btnMultiplica.Text = "*";
-            this.btnMultiplica.UseVisualStyleBackColor = true;
+            this.btnMultiplicar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplicar.Location = new System.Drawing.Point(129, 84);
+            this.btnMultiplicar.Name = "btnMultiplicar";
+            this.btnMultiplicar.Size = new System.Drawing.Size(45, 45);
+            this.btnMultiplicar.TabIndex = 2;
+            this.btnMultiplicar.Text = "*";
+            this.btnMultiplicar.UseVisualStyleBackColor = true;
+            this.btnMultiplicar.Click += new System.EventHandler(this.btnMultiplicar_Click);
             // 
             // btnSuma
             // 
@@ -88,6 +91,7 @@
             this.btnSuma.TabIndex = 3;
             this.btnSuma.Text = "+";
             this.btnSuma.UseVisualStyleBackColor = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
             // 
             // btnN8
             // 
@@ -240,16 +244,19 @@
             this.btnIgual.TabIndex = 17;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // txtScreen
             // 
             this.txtScreen.Font = new System.Drawing.Font("DS-Digital", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtScreen.Location = new System.Drawing.Point(27, 36);
             this.txtScreen.Name = "txtScreen";
+            this.txtScreen.ReadOnly = true;
             this.txtScreen.Size = new System.Drawing.Size(198, 42);
             this.txtScreen.TabIndex = 20;
+            this.txtScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Form1
+            // CALCULADORA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,10 +277,10 @@
             this.Controls.Add(this.btnBorrarTotal);
             this.Controls.Add(this.btnN7);
             this.Controls.Add(this.btnSuma);
-            this.Controls.Add(this.btnMultiplica);
-            this.Controls.Add(this.btnDivide);
+            this.Controls.Add(this.btnMultiplicar);
+            this.Controls.Add(this.btnDividir);
             this.Controls.Add(this.btnResta);
-            this.Name = "Form1";
+            this.Name = "CALCULADORA";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -284,8 +291,8 @@
         #endregion
 
         private Button btnResta;
-        private Button btnDivide;
-        private Button btnMultiplica;
+        private Button btnDividir;
+        private Button btnMultiplicar;
         private Button btnSuma;
         private Button btnN8;
         private Button btnN9;

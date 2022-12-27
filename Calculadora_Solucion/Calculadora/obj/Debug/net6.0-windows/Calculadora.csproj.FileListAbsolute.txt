@@ -4,7 +4,6 @@ C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculador
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\bin\Debug\net6.0-windows\Calculadora.dll
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\bin\Debug\net6.0-windows\Calculadora.pdb
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.csproj.AssemblyReference.cache
-C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.Form1.resources
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.csproj.GenerateResource.cache
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.AssemblyInfoInputs.cache
@@ -15,3 +14,4 @@ C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculador
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.pdb
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.genruntimeconfig.cache
 C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\ref\Calculadora.dll
+C:\Users\feder\Desktop\Calculadora\Calculator-C-\Calculadora_Solucion\Calculadora\obj\Debug\net6.0-windows\Calculadora.CALCULADORA.resources
