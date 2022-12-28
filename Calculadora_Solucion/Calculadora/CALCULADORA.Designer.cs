@@ -64,6 +64,7 @@
             this.btnborrarTotal.TabIndex = 15;
             this.btnborrarTotal.Text = "C";
             this.btnborrarTotal.UseVisualStyleBackColor = false;
+            this.btnborrarTotal.Click += new System.EventHandler(this.btnborrarTotal_Click_1);
             // 
             // btnN8
             // 
@@ -356,6 +357,7 @@
             this.btnSigno.TabIndex = 28;
             this.btnSigno.Text = "+⁄−";
             this.btnSigno.UseVisualStyleBackColor = false;
+            this.btnSigno.Click += new System.EventHandler(this.btnSigno_Click);
             // 
             // CALCULADORA
             // 

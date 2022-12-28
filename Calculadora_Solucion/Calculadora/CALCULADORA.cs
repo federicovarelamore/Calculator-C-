@@ -101,16 +101,26 @@ namespace Calculadora
                     break;
 
                 case '⁄':
-                    Division = objDivision.Division((primero), (segundo));
-                    txtScreen.Text = Division.ToString();
-                    break;
+                    if(txtScreen.Text != "0")
+                    {
+                        Division = objDivision.Division((primero), (segundo));
+                        txtScreen.Text = Division.ToString();
+                        break;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! no es posible dividir por 0", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                    
             }
 
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            if (txtScreen.Text.Length >= 1) //verificamos si el Textbox esta vacio, diciendole que si el número de cifras es mayor o igual a uno que borre.
+            if (txtScreen.Text.Length > 1) //verificamos si el Textbox esta vacio, diciendole que si el número de cifras es mayor o igual a uno que borre.
             {
                 txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Count() - 1);
             } // de lo contrario este no borraria
@@ -128,9 +138,32 @@ namespace Calculadora
 
         }
 
+        private void btnborrarTotal_Click_1(object sender, EventArgs e)
+        {
+            primero = 0;
+            segundo = 0;
+            operador = '\0';
+            txtScreen.Text = "";
+        }
+
+        private void btnSigno_Click(object sender, EventArgs e)
+        {
+            var valor = Convert.ToDouble(txtScreen.Text);
+            valor *= (-1);
+            txtScreen.Text = valor.ToString();
+            
+        }
+
         private void btnQuitar_Click_1(object sender, EventArgs e)
         {
-
+            if (txtScreen.Text.Length > 1) //verificamos si el Textbox esta vacio, diciendole que si el número de cifras es mayor o igual a uno que borre.
+            {
+                txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Count() - 1);
+            }
+            else
+            {
+                txtScreen.Text = "0";
+            }
         }
     }
 }
