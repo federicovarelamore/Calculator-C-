@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\feder\\Desktop\\Calculadora\\Calculator-C-\\Calculadora_Solucion\\Calculadora\\Calculadora.csproj",
-      "projectName": "Calculadora",
-      "projectPath": "C:\\Users\\feder\\Desktop\\Calculadora\\Calculator-C-\\Calculadora_Solucion\\Calculadora\\Calculadora.csproj",
+      "projectUniqueName": "C:\\Users\\feder\\Desktop\\Calculadora\\Calculator-C-\\Calculadora_Solucion\\Calculadora\\CALCULADORA.csproj",
+      "projectName": "CALCULADORA",
+      "projectPath": "C:\\Users\\feder\\Desktop\\Calculadora\\Calculator-C-\\Calculadora_Solucion\\Calculadora\\CALCULADORA.csproj",
       "packagesPath": "C:\\Users\\feder\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\feder\\Desktop\\Calculadora\\Calculator-C-\\Calculadora_Solucion\\Calculadora\\obj\\",
       "projectStyle": "PackageReference",

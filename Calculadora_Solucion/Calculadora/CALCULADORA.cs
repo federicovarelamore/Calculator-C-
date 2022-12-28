@@ -2,9 +2,9 @@ namespace Calculadora
 {
     public partial class CALCULADORA : Form
     {
-        double primero;
-        double segundo;
-        string operador;
+        double primero = 0, segundo = 0;
+
+        char operador;
         public CALCULADORA()
         {
             InitializeComponent();
@@ -15,13 +15,40 @@ namespace Calculadora
         Clases.ClsDivision objDivision = new Clases.ClsDivision();
         Clases.ClsMultiplicacion objMultiplicacion = new Clases.ClsMultiplicacion();
 
-
-
-
-        private void btnN0_Click(object sender, EventArgs e)
+        private void agregarNumero(object sender, EventArgs e)
         {
-            txtScreen.Text = txtScreen.Text + "0";
+            var boton = ((Button)sender);
+            if (txtScreen.Text == "0")
+            {
+                txtScreen.Text = "";
+            }
+            txtScreen.Text += boton.Text;
         }
+
+        private void clickOperador(object sender, EventArgs e)
+        {
+            var boton = ((Button)sender);
+            primero = Convert.ToDouble(txtScreen.Text);
+            operador = Convert.ToChar(boton.Tag);
+
+            if (operador == '²')
+            {
+                primero = Math.Pow(primero, 2);
+                txtScreen.Text = primero.ToString();
+            }
+            else if(operador == '√')
+            {
+                primero = Math.Sqrt(primero);
+                txtScreen.Text = primero.ToString();
+            }
+            else
+            {
+
+                txtScreen.Text = "0";
+            }
+            
+        }
+        
 
         private void btnPunto_Click(object sender, EventArgs e)
         {
@@ -40,87 +67,10 @@ namespace Calculadora
             }
         }
 
-        private void btnN1_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "1";
-        }
-
-        private void btnN2_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "2";
-        }
-
-        private void btnN3_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "3";
-        }
-
-        private void btnN4_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "4";
-        }
-
-        private void btnN5_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "5";
-        }
-
-        private void btnN6_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "6";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnN7_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "7";
-        }
-
-        private void btnN8_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "8";
-        }
-
-        private void btnN9_Click(object sender, EventArgs e)
-        {
-            txtScreen.Text = txtScreen.Text + "9";
-        }
 
         private void btnBorrarTotal_Click(object sender, EventArgs e)
         {
             txtScreen.Text = "";
-        }
-
-        private void btnSuma_Click(object sender, EventArgs e)
-        {
-            operador = "+";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
-        }
-
-        private void btnResta_Click(object sender, EventArgs e)
-        {
-            operador = "-";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
-        }
-
-        private void btnDividir_Click(object sender, EventArgs e)
-        {
-            operador = "/";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
-        }
-
-        private void btnMultiplicar_Click(object sender, EventArgs e)
-        {
-            operador = "*";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
         }
 
         private void btnIgual_Click(object sender, EventArgs e)
@@ -135,22 +85,22 @@ namespace Calculadora
 
             switch (operador)
             {
-                case "+":
+                case '+':
                     Suma = objSuma.Sumar((primero), (segundo)); 
                     txtScreen.Text = Suma.ToString();
                     break;
 
-                case "-": 
+                case '−': 
                     Resta = objResta.Restar((primero), (segundo));
                     txtScreen.Text = Resta.ToString();
                     break;
 
-                case "*":
+                case '×':
                      Multiplicacion = objMultiplicacion.Multiplicar((primero), (segundo));
                     txtScreen.Text = Multiplicacion.ToString();
                     break;
 
-                case "/":
+                case '⁄':
                     Division = objDivision.Division((primero), (segundo));
                     txtScreen.Text = Division.ToString();
                     break;
@@ -158,7 +108,7 @@ namespace Calculadora
 
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
+        private void btnQuitar_Click(object sender, EventArgs e)
         {
             if (txtScreen.Text.Length >= 1) //verificamos si el Textbox esta vacio, diciendole que si el número de cifras es mayor o igual a uno que borre.
             {
@@ -166,7 +116,19 @@ namespace Calculadora
             } // de lo contrario este no borraria
         }
 
-        private void txtScreen_TextChanged(object sender, EventArgs e)
+
+
+        private void CALCULADORA_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCuadrado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuitar_Click_1(object sender, EventArgs e)
         {
 
         }
